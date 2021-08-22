@@ -13,6 +13,9 @@ Build the docker image with:
 Enter build environment:
 - `docker run --rm -it -v '$pwd:/root/qvux' qvux`
 
+Create the build folder:
+- `mkdir build`
+
 Build the system with:
 - `make all`
 
