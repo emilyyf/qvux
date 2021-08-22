@@ -10,12 +10,6 @@ align 4
 	dd FLAGS
 	dd CHECKSUM
 
-section .bss
-	align 16
-stack_bottom:
-	resb 1024 * 16
-stack_top:
-
 section .text
 global _start:function (_start.end - _start)
 _start:
@@ -28,3 +22,9 @@ _start:
 	hlt
 	jmp .hang
 .end:
+
+section .bss
+	align 16
+stack_bottom:
+	resb 1024 * 16
+stack_top:
