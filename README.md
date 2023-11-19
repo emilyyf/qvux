@@ -2,23 +2,12 @@
 Yet another useless operating system that will probably never be finished
 
 ## Prerequisites
-- [Docker](https://www.docker.com/)
 - [QEMU](https://www.qemu.org/)
 
-## Setup
-Build the docker image with:
-- `docker build buildenv -t qvux`
-
 ## Build
-Enter build environment:
-- `docker run --rm -it -v '$pwd:/root/qvux' qvux`
-
-Create the build folder:
-- `mkdir build`
-
 Build the system with:
-- `make all`
+- `cargo bootimage`
 
 ## Run
 Run the system with:
-- `qemu-system-x86_64 qvux.iso`
+- `cargo run`
